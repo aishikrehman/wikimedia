@@ -153,19 +153,6 @@ def main(*args: str) -> None:
             )
             continue
 
-        pywikibot.output('Moving {} to {}...'
-                         .format(page.title(as_link=True,
-                                            force_interwiki=True),
-                                 targetpage.title(as_link=True)))
-
-        pywikibot.log('Getting page text.')
-        text = page.get(get_redirect=True)
-        source_link = page.title(as_link=True, insite=targetpage.site)
-        
-        summary = "নতুন ভুক্তি"
-        targetpage.put(text, summary=summary)
-
-
 
 if __name__ == '__main__':
     main()
